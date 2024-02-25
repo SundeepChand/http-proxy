@@ -1,0 +1,9 @@
+Server:
+  Port: 3000
+
+RoutesMapping:
+  "/api/users":
+    Origins:
+      - http://localhost:3001/api/users
+      - http://localhost:3002/api/users
+    LoadBalancingStrategy: "LOAD_BALANCING_ROUND_ROBIN"
